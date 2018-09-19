@@ -512,7 +512,7 @@ Stream Data Segment
     :escape: \
     
     "event", "String", "**MUST** be ``account``"
-    "data, "Array", "Account updates"
+    "data", "Array", "Account updates"
     "data[].currency", "String", "| Account currency. Can be ``USDT``, ``BTC``, ``ETH``, ``LTC``, ``BCH``"
     "data[].available", "String", "Account available balance for trading and withdraw"
     "data[].locked", "String", "Account locked balance for trading and deposit"
