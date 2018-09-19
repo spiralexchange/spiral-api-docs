@@ -9,9 +9,9 @@ All request and response data is in JSON format with UTF-8 encoding if not speci
 HTTP REST API
 -------------
 
-For *GET* request, parameters, if any, are encoded in *x-www-form-urlencoded* and sent via URL query string.
+For ``GET`` request, parameters, if any, are encoded in ``x-www-form-urlencoded`` and sent via URL query string.
 
-For *POST* and *PUT* request, request *Content-Type* must be *application/json*.
+For ``POST`` and ``PUT`` request, request ``Content-Type`` must be ``application/json``.
 
 Error Response
 ^^^^^^^^^^^^^^
@@ -43,7 +43,7 @@ Content-type: application/json
 
 
 There is no a unified structure of success response. They are different for each REST API.
-To distinguish from error response, there is no *error_code* field in response data.
+To distinguish from error response, there is no ``error_code`` field in response data.
 
 
 WebSocket
@@ -72,7 +72,7 @@ Request and response uses unified JSON data structure.
 Error Response
 ^^^^^^^^^^^^^^
 
-*event* field is "error", *data* field structure is the same as HTTP REST API error response.
+``event`` field is "error", ``data`` field structure is the same as HTTP REST API error response.
 
 
 .. code-block:: json

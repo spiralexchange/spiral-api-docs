@@ -30,21 +30,23 @@ Authenticating with an API Key
 
 Authentication is done by sending the following HTTP headers:
 
-*api-key*: Your access API key. This the id param returned when you create an API Key via the API.
+``api-key``: Your access API key. This the id param returned when you create an API Key via the API.
 
-*api-expires*: A UNIX timestamp after which the request is no longer valid. This is to prevent replay attacks.
+``api-expires``: A UNIX timestamp after which the request is no longer valid. This is to prevent replay attacks.
 
 ``UNIX timestamps are in seconds. For example, 2018-02-08T04:30:37Z is 1518064237.``
 
-*api-signature*: A signature of the request you are making.
-It is calculated as *hex(HMAC_SHA256(apiSecret, verb + path + data))*
+``api-signature``: A signature of the request you are making.
+It is calculated as ``hex(HMAC_SHA256(apiSecret, verb + path + data))``
 
-The *data* Param
-^^^^^^^^^^^^^^^^
+The ``data`` Param
+^^^^^^^^^^^^^^^^^^
 The data part of the HMAC construction should be exactly equal to the raw body you send to the server.
 You can send JSON or form encoding, just ensure you use the exact same body string in the HMAC.
 Generally you will want to prepare the request in your language of choice,
 then use the same raw body string for the HMAC construction as in the request body.
+
+.. _auth-signature-calc:
 
 Full sample calculation
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -73,9 +75,9 @@ Use these calculations as test cases in your code.
 WebSocket
 ---------
 
-After WebSocket connection established, client request *authenticate* event for authentication.
+After WebSocket connection established, client request ``authenticate`` event for authentication.
 
-Signature is *hex(HMAC_SHA256(secret_key, 'GET/realtime' + expires))*
+Signature is ``hex(HMAC_SHA256(secret_key, 'GET/realtime' + expires))``
 
 .. code-block:: json
 
