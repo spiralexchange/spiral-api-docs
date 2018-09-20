@@ -1,7 +1,7 @@
 Trading API Introduction
 ========================
 
-Besides to manually tradding in `Spiral Exchange Web <https://www.spiral.exchange>`, there is trading API for automation trading programming.
+Besides to manually tradding in `Spiral Exchange Web <https://www.spiral.exchange>`_, there is trading API for automation trading programming.
 There are two forms of API: HTTP REST API and WebSocket. These forms of API must be used together to receive realtime data and management orders.
 
 HTTP RESET API
