@@ -136,6 +136,28 @@ Request
         }
     }
 
+Response
+""""""""
+.. csv-table:: Response Data
+    :header: "Field Name", "Data Type", "Description"
+    :widths: 20, 20, 80
+    
+    "event", "String", "**MUST** be ``subscribed``"
+    "data.topic", "String", "**MUST** be ``ticker``"
+    "data.symbols", "String Array", "Symbol names of tickers to subscribe"
+
+.. code-block:: json
+   :caption: Response
+
+    {
+        "event": "subscribed",
+        "data": {
+            "topic": "ticker",
+            "symbols": ["BTCUSDT", "ETHBTC", "ETHUSDT", "BCHUSDT", "BCHBTC", "LTCUSDT", "LTCBTC"]
+        }
+    }
+
+
 Stream Data Segment
 """""""""""""""""""
 
@@ -197,6 +219,28 @@ Request
         }
     }
 
+Response
+""""""""
+.. csv-table:: Response Data
+    :header: "Field Name", "Data Type", "Description"
+    :widths: 20, 20, 80
+    
+    "event", "String", "**MUST** be ``subscribed``"
+    "data.topic", "String", "**MUST** be ``orderbook``"
+    "data.symbols", "String Array", "Symbol names of orderbook to subscribe"
+
+.. code-block:: json
+   :caption: Response
+
+    {
+        "event": "subscribed",
+        "data": {
+            "topic": "orderbook",
+            "symbols": ["ETHUSDT"]
+        }
+    }
+
+
 Stream Data Segment
 """""""""""""""""""
 
@@ -254,6 +298,28 @@ Request
         }
     }
 
+Response
+""""""""
+.. csv-table:: Response Data
+    :header: "Field Name", "Data Type", "Description"
+    :widths: 20, 20, 80
+    
+    "event", "String", "**MUST** be ``subscribed``"
+    "data.topic", "String", "**MUST** be ``trade``"
+    "data.symbols", "String Array", "Symbol names of trades to subscribe"
+
+.. code-block:: json
+   :caption: Response
+
+    {
+        "event": "subscribed",
+        "data": {
+            "topic": "trade",
+            "symbols": ["ETHUSDT"]
+        }
+    }
+
+
 Stream Data Segment
 """""""""""""""""""
 
@@ -296,7 +362,7 @@ Request
     
     "event", "String", "**MUST** be ``subscribe``"
     "data.topic", "String", "**MUST** be ``kline``"
-    "data.symbols", "String Array", "Symbol names of trades to subscribe"
+    "data.symbols", "String Array", "Symbol names of kline to subscribe"
     "data.period_minutes", Integer, "Period of minutes, minimum is 1"
 
 .. code-block:: json
@@ -310,6 +376,30 @@ Request
             "period_minutes": 1
         }
     }
+
+Response
+""""""""
+.. csv-table:: Response Data
+    :header: "Field Name", "Data Type", "Description"
+    :widths: 20, 20, 80
+    
+    "event", "String", "**MUST** be ``subscribed``"
+    "data.topic", "String", "**MUST** be ``kline``"
+    "data.period_minutes", Integer, "Period of minutes"
+    "data.symbols", "String Array", "Symbol names of kline to subscribe"
+
+.. code-block:: json
+   :caption: Response
+
+    {
+        "event": "subscribed",
+        "data": {
+            "topic": "kline",
+            "period_minutes": 1,
+            "symbols": ["ETHUSDT"]
+        }
+    }
+
 
 Stream Data Segment
 """""""""""""""""""
