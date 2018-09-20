@@ -30,7 +30,7 @@ Request
     :widths: 20, 20, 80
     
     "event", "String", "**MUST** be ``ping``"
-    "data", "Number", "Current UNIX timestamp in seconds"
+    "data", "Integer", "Current UNIX timestamp in seconds"
 
 .. code-block:: json
    :caption: Ping to server
@@ -47,7 +47,7 @@ Response
     :widths: 20, 20, 80
     
     "event", "String", "Server response event ``pong``"
-    "data", "Number", "Current UNIX timestamp in seconds"
+    "data", "Integer", "Current UNIX timestamp in seconds"
 
 .. code-block:: json
    :caption: Pong from server
@@ -71,7 +71,7 @@ Request
     
     "event", "String", "**MUST** be ``authenticate``"
     "data.api_key", "String", "API access key"
-    "data.expires", "Number", "A UNIX timestamp after which the request is no longer valid. This is to prevent replay attacks."
+    "data.expires", "Integer", "A UNIX timestamp after which the request is no longer valid. This is to prevent replay attacks."
     "data.signature", "String", "A signature of the request you are making. See :ref:`auth-signature-calc`"
 
 .. code-block:: json
@@ -174,7 +174,7 @@ Stream Data Segment
     "data.low", "String", "Low price"
     "data.base_volume", "String", "Trade volume, take BTCUSDT for example, the unit is BTC"
     "data.quote_volume", "String", "Quote volume, take BTCUSDT for example, the unit is USDT"
-    "data.timestamps", "Number", "UNIX timestampe of stream data segment send, in millisecond"
+    "data.timestamps", "Integer", "UNIX timestampe of stream data segment send, in millisecond"
 
 .. code-block:: json
    :caption: Stream Data Segment
@@ -250,9 +250,9 @@ Stream Data Segment
     
     "event", "String", "**MUST** be ``orderbook``"
     "data.symbol", "String", "Indicate symbol of current stream data segment"
-    "data.last_update_id", "Number", "Sequence number, order book may be sent in misorder. Client can use this id to sort order book data"
+    "data.last_update_id", "Integer", "Sequence number, order book may be sent in misorder. Client can use this id to sort order book data"
     "data.timestamps", "String", "UNIX timestampe of stream data segment send, in millisecond"
-    "data.type", "Number", "| 1: Incremental order book update
+    "data.type", "Integer", "| 1: Incremental order book update
     | 2: Full snapshot order book
     | 3: 50 levels snapshot order book
     | 4: 100 levels snapshot order book"
@@ -331,7 +331,7 @@ Stream Data Segment
     :widths: 20, 20, 80
     
     "event", "String", "**MUST** be ``trade``"
-    "data.id", "Number", "Trade id"
+    "data.id", "Integer", "Trade id"
     "data.side", "String", "Refer to :doc:`Side <./dict>`"
     "data.symbol", "String", "Indicate symbol of current stream data segment"
     "data.price", "String", "Trade price"

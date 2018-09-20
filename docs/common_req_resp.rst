@@ -26,7 +26,7 @@ Content-Type: application/json
     :header: "Field Name", "Data Type", "Description"
     :widths: 20, 20, 80
     
-    "error_code", "Number", "Error code, 400 for bad request, 500 for server internal error, others for special meaning"
+    "error_code", "Integer", "Error code, 400 for bad request, 500 for server internal error, others for special meaning"
     "message", "String", "Detail error messages"
 
 .. code-block:: json
