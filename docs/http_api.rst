@@ -411,7 +411,7 @@ Rquest
 
     "symbol", "String", "Query", "Trading symbol name"
     "side", "String", "Query", "Side. Refer to :doc:`Side <./dict>`"
-    "filter", "String", "| JSON string. Generic table filter. Supported filters:
+    "filter", "String", "Query", "| JSON string. Generic table filter. Supported filters:
     | ``open``: Boolean, query open or close orders"
     "count", "Integer", "Query", "``REQUIRED`` Number of orders to fetch. Range: 1 - 1000"
     "reverse", "Boolean", "Query", "Whether sort results in create time descend"
@@ -572,7 +572,7 @@ Request
     :widths: 20, 20, 20, 80
 
     "symbol", "String", "Query", "Cancel orders of specified symbol"
-    "filter", "String", "| JSON string. Generic table filter. Supported filters:
+    "filter", "String", "Query", "| JSON string. Generic table filter. Supported filters:
     | ``side``: String, ``buy`` or ``sell``"
 
 Response
