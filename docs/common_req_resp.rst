@@ -6,12 +6,14 @@ Data Encoding
 
 All request and response data is in JSON format with UTF-8 encoding if not special statement.
 
+.. _REST-API-FORMAT:
+
 HTTP REST API
 -------------
 
 For ``GET`` request, parameters, if any, are encoded in ``x-www-form-urlencoded`` and sent via URL query string.
 
-For ``POST`` and ``PUT`` request, request ``Content-Type`` must be ``application/json``.
+For ``POST`` and ``PUT`` request, request ``Content-Type`` must be ``application/json`` if no clarification.
 
 Error Response
 ^^^^^^^^^^^^^^

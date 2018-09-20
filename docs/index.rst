@@ -15,10 +15,4 @@ Welcome to Spiral Exchange API documentation!
    authentication
    http_api
    websocket
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   dict

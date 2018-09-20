@@ -256,7 +256,10 @@ Stream Data Segment
     | 2: Full snapshot order book
     | 3: 50 levels snapshot order book
     | 4: 100 levels snapshot order book"
-    "data.data", "Array", "| Array of String Array, each string array has 3 items: Price, Size and side (bid or ask)"
+    "data.data", "Array of Array", "Array of order book data"
+    "data.data[][0]", "String", "Price"
+    "data.data[][1]", "String", "Size"
+    "data.data[][2]", "String", "Side. Refer to :doc:`Side <./dict>`"
 
 .. code-block:: json
    :caption: Stream Data Segment
@@ -329,7 +332,7 @@ Stream Data Segment
     
     "event", "String", "**MUST** be ``trade``"
     "data.id", "Number", "Trade id"
-    "data.side", "String", "``ask`` or ``bid``"
+    "data.side", "String", "Refer to :doc:`Side <./dict>`"
     "data.symbol", "String", "Indicate symbol of current stream data segment"
     "data.price", "String", "Trade price"
     "data.quantity", "String", "Trade quantity"
@@ -410,15 +413,16 @@ Stream Data Segment
     :escape: \
     
     "event", "String", "**MUST** be ``kline``"
-    "data", "Array", "| 0: Integer. Open time, UNIX timestamp, in milliseconds
-    | 1: String. Open price
-    | 2: String. High price
-    | 3: String. Low price
-    | 4: String. Close price
-    | 5: String. Traded volumn
-    | 6: Integer. Close time, UNIX timestamp, in millisecond
-    | 7: String. Reserved future usage, always \"0\"
-    | 8: Integer. Number of trades"
+    "data", "Array", "Kline datas"
+    "data.[0]", "Integer", "Open time, UNIX timestamp, in milliseconds"
+    "data.[1]", "String", "Open price"
+    "data.[2]", "String", "High price"
+    "data.[3]", "String", "Low price"
+    "data.[4]", "String", "Close price"
+    "data.[5]", "String", "Traded volumn"
+    "data.[6]", "Integer", "Close time, UNIX timestamp, in millisecond"
+    "data.[7]", "String", "Reserved future usage, always \"0\""
+    "data.[8]", "Integer", "Number of trades"
 
 .. code-block:: json
    :caption: Stream Data Segment
@@ -508,24 +512,11 @@ Stream Data Segment
     "data.clt_ord_id", "String" , "Client order id"
     "data.user_id", "Integer", "User id"
     "data.symbol", "String", "Symbol name"
-    "data.side", "String", "Order side, ``bid`` or ``ask``"
+    "data.side", "String", "Order side, refer to :doc:`Side <./dict>`"
     "data.price", "String", "Order price"
     "data.quantity", "String", "Order quantity"
-    "data.type", "String", "Order type: ``limit``, ``market``"
-    "data.status", "String", "| Order status, possible values are:
-    | ``submitted``
-    | ``accepted``
-    | ``waiting``
-    | ``rejected``
-    | ``partial_filled``
-    | ``filled``
-    | ``cancel_requested``
-    | ``cancel_rejected``
-    | ``cancelled``
-    | ``modify_requested``
-    | ``modify_rejected``
-    | ``modified``
-    | ``unknown"``
+    "data.type", "String", "Order type.Refer to :doc:`OrderType <./dict>`"
+    "data.status", "String", "Refer to :doc:`OrderStatus <./dict>`"
     "data.create_time", "Integer", "Order create UNIX timestampe, in millisecond"
     "data.update_time", "Integer", "Order last update UNIX timestampe, in millisecond"
 
@@ -603,7 +594,7 @@ Stream Data Segment
     
     "event", "String", "**MUST** be ``account``"
     "data", "Array", "Account updates"
-    "data[].currency", "String", "| Account currency. Can be ``USDT``, ``BTC``, ``ETH``, ``LTC``, ``BCH``"
+    "data[].currency", "String", "Refer to :doc:`Currency <./dict>`"
     "data[].available", "String", "Account available balance for trading and withdraw"
     "data[].locked", "String", "Account locked balance for trading and deposit"
     "data[].timestamp", "Integer", "Account update UNIX timestamp, in millisecond"
