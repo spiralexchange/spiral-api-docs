@@ -1,7 +1,3 @@
-.. caution::
-    Authentication is still in developmenting.
-
-
 Authentication
 ==============
 
