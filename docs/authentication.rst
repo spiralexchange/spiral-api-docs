@@ -108,8 +108,8 @@ Signature is ``hex(HMAC_SHA256(secret_key, 'GET/realtime' + expires))``
     {
         "event": "authenticate",
         "data": {
-            "api_key": "abc0de9fg8hi7jkl6mnop5qrst4uvw3x2y1z",
+            "api_key": "LAqUlngMIQkIUjXMUreyu3qn",
             "expires": 1521182920,
-            "signature": "zyx1w2v3ut4sr5q6pon7ml8kji9hg0fedcba"
+            "signature": "ddb665352904189812c05df815b852589cd4fcdfa28fc4d2397128d8bd2d127c"
         }
     }

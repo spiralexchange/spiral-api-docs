@@ -93,16 +93,12 @@ Response
     :widths: 20, 20, 80
     
     "event", "String", "**MUST** be ``authenticated``"
-    "data.success", "Boolean", "``True`` if succssed, otherwise a error response instead"
 
 .. code-block:: json
    :caption: Response
 
     {
         "event": "authenticated",
-        "data": {
-            "success": true
-        }
     }
 
 Public Subscriptions
