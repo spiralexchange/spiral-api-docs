@@ -32,6 +32,10 @@ Authentication is done by sending the following HTTP headers:
 
 ``UNIX timestamps are in seconds. For example, 2018-02-08T04:30:37Z is 1518064237.``
 
+.. tip::
+
+    ``api-expires`` must be set to a future timestamp, like 5 seconds in future. For python, it will be: ``int(round(time.time()) + 5)``
+
 ``api-signature``: A signature of the request you are making.
 It is calculated as ``hex(HMAC_SHA256(apiSecret, verb + path + data))``
 
