@@ -15,9 +15,6 @@ With HTTP REST API, you can
 * Query orders
 * Query trade
 
-.. Note::
-   HTTP REST API will be removed in future. All features will move to WebSocket to reduce network latency, improve performance and easy to integration.
-
 WebSocket
 ---------
 

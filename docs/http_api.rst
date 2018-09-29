@@ -190,7 +190,9 @@ Request
     :widths: 20, 20, 20, 80
 
     "symbol", "String", "Query", "``REQUIRED`` Trading symbol name"
-    "limit", "Integer", "Query", "``REQUIRED`` Number of results to fetch. Valid values: ``5``, ``10``, ``20``, ``50``, ``100``" 
+    "limit", "Integer", "Query", "| ``REQUIRED`` Number of results to fetch. 
+    | Min = 0, Max = 1000.  Valid values: ``0``, ``5``, ``10``, ``20``, ``50``, ``100``, ``1000``.
+    | For limit = 0, full order book will be returned."
 
 Response
 """"""""
