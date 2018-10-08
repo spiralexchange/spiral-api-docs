@@ -142,7 +142,7 @@ Request
     :widths: 20, 20, 20, 80
 
     "symbol", "String", "Query", "``REQUIRED`` Trading symbol name"
-    "peroid", "Integer", "Query", "Period of K-Line, such as 1, 5, 15, in minute unit."
+    "period", "Integer", "Query", "Period of K-Line, such as 1, 5, 15, in minute unit."
     "limit", "Integer", "Query", "Number of results to fetch. Range: 1 - 500"
 
 Response
