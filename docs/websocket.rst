@@ -510,6 +510,8 @@ Stream Data Segment
     "data.symbol", "String", "Symbol name"
     "data.side", "String", "Order side, refer to :doc:`Side <./dict>`"
     "data.price", "String", "Order price"
+    "data.filled_price", "String", "Average order filled price"
+    "data.filled_quantity", "String", "Order accumulated filled quantity"
     "data.quantity", "String", "Order quantity"
     "data.type", "String", "Order type.Refer to :doc:`OrderType <./dict>`"
     "data.status", "String", "Refer to :doc:`OrderStatus <./dict>`"
