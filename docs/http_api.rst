@@ -476,7 +476,8 @@ Request
     :header: "Field Name", "Data Type", "Location", "Description"
     :widths: 20, 20, 20, 80
 
-    "clt_ord_id", "String", "Body", "Client Order ID. This id will come back on the order and any related executions."
+    "clt_ord_id", "String", "Body", "| Client Order ID. This id will come back on the order and any related executions.
+    | Should only contains alphanumeric characters, underscore, hyphen and colon"
     "symbol", "String", "Body", "``REQUIRED`` Symbol name"
     "type", "String", "Body", "``REQUIRED`` Refer to :doc:`OrderType <./dict>`"
     "price", "String", "Body", "``REQUIRED`` Order price"
