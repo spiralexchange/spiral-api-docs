@@ -5,6 +5,38 @@ Base URI: https://api.spiral.exchange/api/v1
 
 Refer to :ref:`Request and Response <REST-API-FORMAT>` for request and response data structure and encoding.
 
+Rate Limit
+----------
+
+Requests to our REST API are rate limited to 300 requests per 5 minutes. This counter refills continuously. 
+
+Viewing Your Request Rate Limit
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+On each request to the API, these headers are returned:
+
+.. code-block:: ini
+
+    "x-ratelimit-limit": 300
+    "x-ratelimit-remaining": 297
+    "x-ratelimit-reset": 1489791662
+
+Use these headers to determine your current limit and remaining requests.
+At the UNIX timestamp designated by ``x-ratelimit-reset``, you will have enough requests left to retry your current request.
+If you have not exceeded your limit, this value is always the current timestamp.
+
+If you are limited, you will receive a 429 response.
+
+Order Count Limits
+------------------
+
+To keep an orderly market, Spiral imposes limits on the number of open orders per account. These limits are:
+
+    Maximum 100 open orders per account
+
+When placing a new order that causes these caps to be exceeded, it will be rejected with the message "excced max opening order limit".
+
+
 Public API
 ----------
 
