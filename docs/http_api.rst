@@ -279,7 +279,6 @@ Response
     :widths: 20, 20, 80
 
     "trades", "Array", "Array of trade data"
-    "trades[].id", "Integer", "Trade id"
     "trades[].side", "String", "Trade side. Refer to :doc:`Side <./dict>`"
     "trades[].symbol", "String", "Product symbol"
     "trades[].price", "String", "Trade Price"
