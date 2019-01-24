@@ -1,0 +1,16 @@
+version: '2.4'
+services:
+  web:
+    image: nautiluscapital/sphinx
+    ports:
+      - 80:80
+    volumes:
+      - ./docs:/docs
+    command: web
+  build:
+    image: nautiluscapital/sphinx
+    volumes:
+      - ./docs:/docs
+    command: build
+    
+       
